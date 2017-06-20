@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E380E95D46D1B3B2AECCBF832AD62E33597FBABB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C17517EA8FD9FCE36268C882C88D78546D106284" : 0,
+    "E380E95D46D1B3B2AECCBF832AD62E33597FBABB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "10D0BBE8-24F0-462F-93BA-DE16E0EA71E5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C17517EA8FD9FCE36268C882C88D78546D106284" : "wenqi-sucks\/",
+    "E380E95D46D1B3B2AECCBF832AD62E33597FBABB" : "NPLModule\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NPLModule",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NPLModule.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mxchai\/wenqi-sucks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C17517EA8FD9FCE36268C882C88D78546D106284"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wenqiwooo\/ariel-personal-assistant.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E380E95D46D1B3B2AECCBF832AD62E33597FBABB"
+    }
+  ]
+}

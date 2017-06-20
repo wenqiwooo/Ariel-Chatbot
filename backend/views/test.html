@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("button").click(function() {
+        $.ajax({
+            url: "/api/requests",
+            type: "post",
+            dataType: "json",
+            data: $("form#registerSubmit").serialize(),
+            success: function(data) {
+                $("#counter").html("Sent!");
+            }
+        });
+    });
+    var i = 0;
+    (function worker() {
+        $.ajax({url: '/api/requests',
+                success: function(data) {
+                    $("#results").html(data);
+                    $("#counter").html("# of refreshes: " + i++);
+                    setTimeout(worker, 0);
+                },
+                error: function() {
+                    $("#counter").html("Reconnecting...");
+                    setTimeout(worker, 3000);
+                }
+        });
+    })();
+});
+</script>
+</head>
+<body>
+    <form id="registerSubmit">
+    Flight: <input type="text" name="flight" value="SQ321" /><br>
+    Seat: <input type="text" name="seat" value="12C" /><br>
+    Name: <input type="text" name="name" value="Anon" /><br>
+    Message: <input type="text" name="message" value="Hello!" /><br>
+    Category: <input type="text" name="category" value="random" /><br>
+    </form>
+    <button>Send message</button><div id="counter"></div>
+    <hr>
+    <div id="results"></div>
+</body>
+</html>

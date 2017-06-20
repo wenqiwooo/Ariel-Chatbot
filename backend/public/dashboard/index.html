@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap/css/sia.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<title>SIA Admin Dashboard</title>
+
+<script>
+function newMessage(doc) {
+    var seat = doc.seat;
+    var name = doc.name;
+    var message = doc.message;
+    var category = doc.category;
+    var done = doc.done == "true";
+    var id = doc._id;
+    var rev = doc._rev;
+    var statusLabel = '<span id="' + id + '" class="label label-';
+    if (!done) {
+        statusLabel += 'warning">New</span>';
+    } else {
+        statusLabel += 'success">Done</span>';
+    }
+    var newRequest = '<button type="button" id="b' + id + '" style="display: none;" class="list-group-item" clearfix>'
+                     + statusLabel
+                     + ' ' + '<span class="label label-info">' + seat + '</span>'
+                     + ' ' + '<span class="label label-default">' + name + '</span>'
+                     + ' ' + message
+                     + '<span class="badge">' + category + '</span></button>';
+    $("#new-messages").prepend(newRequest);
+    $("#b" + id).slideDown('fast').effect("highlight", {color: "#f99f1c"}, 1000);
+    $("#" + id).click(function() {
+        doc.done = true;
+        $.ajax({
+            url: "/api/requests",
+            type: "put",
+            dataType: "json",
+            data: doc
+        });
+        
+        $(this).replaceWith('<span class="label label-success">Done</span>');
+    });
+}
+$(document).ready(function() {
+    var lastDate = '1970-01-01T00:00:00.000Z';
+    var flight = 'SQ321';
+    (function worker() {
+        function handleResponse(data) {
+            var messages = JSON.parse(data);
+            for (var i = 0; i < messages.length; i++) {
+                var message = messages[i];
+                newMessage(message);
+                lastDate = message.timestamp;
+            }
+            setTimeout(worker, 0);
+        }
+        $.ajax({url: '/api/requests?flight=' + flight + '&date=' + lastDate,
+                success: handleResponse,
+                error: function() { setTimeout(worker, 3000); }
+        });
+    })();
+});
+</script>
+
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-static-top active" role="navigation">
+      <img alt="Brand" src="logo-singaporeairlines.svg" style="padding:10px 10px 10px 10px; float: left" />
+      <a class="navbar-brand" href="index.html">Admin Dashboard</a>
+    </nav>
+
+    <div class="tab-content" style="float: left; width: 30%">
+      <div id="seatmap" class="tab-pane fade in active">
+      <img alt="Seat map" src="Singapore_Air_Airbus_A380_B.jpg" style="padding:10px 10px 10px 10px; width: 100%" />
+      </div>
+    </div>
+
+	<div class="tab-content" style="float: left; width: 70%">
+	  <div id="requests" class="tab-pane fade in active">
+	    <h3>Passenger Requests</h3>
+	    <div id="new-messages" class="list-group" style="margin-right:5%"></div>
+	  </div>
+	</div>
+
+  </div>
+
+</body>
+</html>

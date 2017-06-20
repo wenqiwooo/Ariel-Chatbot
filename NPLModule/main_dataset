@@ -1,0 +1,54 @@
+wifi
+1 0 0 0 0 0 0 0 0
+wifi wifi
+1 0 0 0 0 0 0 0 0
+wifi wifi wifi
+1 0 0 0 0 0 0 0 0
+meal
+0 1 0 0 0 0 0 0 0
+meal meal
+0 1 0 0 0 0 0 0 0
+meal meal meal
+0 1 0 0 0 0 0 0 0
+emergency
+0 0 1 0 0 0 0 0 0
+emergency emergency
+0 0 1 0 0 0 0 0 0
+emergency emergency
+0 0 1 0 0 0 0 0 0
+flight
+0 0 0 1 0 0 0 0 0
+flight flight
+0 0 0 1 0 0 0 0 0
+flight flight flight
+0 0 0 1 0 0 0 0 0
+hotel
+0 0 0 0 1 0 0 0 0
+hotel hotel
+0 0 0 0 1 0 0 0 0
+hotel hotel hotel
+0 0 0 0 1 0 0 0 0
+blanket
+0 0 0 0 0 1 0 0 0
+blanket blanket
+0 0 0 0 0 1 0 0 0
+blanket blanket blanket
+0 0 0 0 0 1 0 0 0
+catalog
+0 0 0 0 0 0 1 0 0
+catalog catalog
+0 0 0 0 0 0 1 0 0
+catalog catalog catalog
+0 0 0 0 0 0 1 0 0
+car
+0 0 0 0 0 0 0 1 0
+car car
+0 0 0 0 0 0 0 1 0
+car car car
+0 0 0 0 0 0 0 1 0
+weather
+0 0 0 0 0 0 0 0 1
+weather weather
+0 0 0 0 0 0 0 0 1
+weather weather weather
+0 0 0 0 0 0 0 0 1

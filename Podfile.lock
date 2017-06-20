@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (3.0.0-beta.3)
+  - JSQMessagesViewController (7.2.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - Onboard (2.1.7)
+  - SwiftyJSON (2.3.0)
+  - TextFieldEffects (0.4.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0.0-beta.3)
+  - JSQMessagesViewController
+  - Onboard
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TextFieldEffects
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 3b5d0d4e0c19173b1bf0dc823bde25ad870f70c0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: c89149e58431f6f94527e8c01f920456afe39bd0
+  JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  Onboard: 87648089e1b76d13b4f5bf8f7a1cdb144092f0af
+  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+  TextFieldEffects: a8bdc830953cdc8a6c8c640e39411c78c83f7e0d
+
+COCOAPODS: 0.38.2

@@ -1,0 +1,42 @@
+Can I see the menu?
+1 0 0 0 0 0 0 0
+Can I know what is for dinner?
+1 0 0 0 0 0 0 0
+May I see the menu?
+1 0 0 0 0 0 0 0
+I want food.
+1 0 0 0 0 0 0 0
+What food is there?
+1 0 0 0 0 0 0 0
+What drinks are there?
+0 1 0 0 0 0 0 0
+I am hungry.
+0 0 0 0 1 0 0 0
+I am starving.
+0 0 0 0 1 0 0 0
+I want food. I am starving.
+0 0 0 0 1 0 0 0
+I'd like a drink please.
+0 1 0 0 0 0 0 0
+Give me a drink.
+0 1 0 0 0 0 0 0
+I am thirsty.
+0 1 0 0 0 0 0 0
+I am thirsty. Give me a drink.
+0 1 0 0 0 0 0 0
+The drink was delicious.
+0 0 0 0 0 0 1 0
+The food was delicious.
+0 0 0 0 0 0 1 0
+The steak is nice.
+0 0 0 0 0 0 1 0
+The steak and salmon are delicious.
+0 0 0 0 0 0 1 0
+The food was bad.
+0 0 0 0 0 0 0 1
+The drink was bad.
+0 0 0 0 0 0 0 1
+The beef was bad.
+0 0 0 0 0 0 0 1
+The steak and salmon are unappetizing.
+0 0 0 0 0 0 0 1
